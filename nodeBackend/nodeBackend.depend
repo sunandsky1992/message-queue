@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1431660152 source:/home/ss/workspace/message-queue/nodeBackend/main.cpp
+	<zmq.h>
+	<stdio.h>
+	<cstdlib>
+	<unistd.h>
+	<string.h>
+	<assert.h>
+	<iostream>
+	<json/json.h>
+	<list>
+	"queueList.h"
+
+1432088332 /home/ss/workspace/message-queue/nodeBackend/queueList.h
+	<list>
+	<vector>
+	<map>
+	"queue.h"
+	<string>
+
+1431658656 /home/ss/workspace/message-queue/nodeBackend/queue.h
+	"queue.h"
+	<list>
+	<string>
+
+1431659218 source:/home/ss/workspace/message-queue/nodeBackend/queue.cpp
+	"queue.h"
+

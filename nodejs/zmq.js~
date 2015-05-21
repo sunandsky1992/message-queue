@@ -11,7 +11,7 @@ function sendMessage(addr,message,res)
 	});
 }
 
-function receiveMessage(addr,res)
+function receiveMessage(addr,message,res)
 {
 	var socket = zmq.socket('req');
 	socket.connect('tcp://'+addr);

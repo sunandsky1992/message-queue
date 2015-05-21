@@ -3,7 +3,7 @@ var zmq = require('zmq');
 function sendMessage(addr,message,res)
 {
 	var socket = zmq.socket('req');
-	console.log('tcp://'+addr);
+	console.log('tcp://'+addr+"  "+message);
 	socket.connect('tcp://'+addr);
 	socket.send(message);
 	socket.on('message',function(data){

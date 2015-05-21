@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var url = require('url');
 var router = express.Router();
 var zmq = require('./zmq');
 router.use(function logs(req,res,next){
@@ -24,8 +25,9 @@ router.put('/mq/create',function(req,res){
 })
 
 router.get('/mq/receive',function(req,res){
+	var queueName = url.parse(req.url,true).query.queue;
+        var message = "{\"queue\":\""+queueName+"\"}" 	
 	try{
-		var message="{\"code\":\"receive\"}";
 		console.log(message);
 		zmq.sendMessage('localhost:5556',message,res);
 	}
